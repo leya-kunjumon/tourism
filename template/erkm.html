@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .nav-link:hover{
+            border: 1px solid white;
+           }
+           p{
+               text-align: justify;
+               font-family: Arial, Helvetica, sans-serif;
+               font-size: 18px;
+               }
+               .fa{
+              color: white;
+              font-size: 20px;
+              margin-right: 5px;
+              margin-bottom: 20px;
+
+             }
+            .container-fluid ul li{
+              list-style: none;
+              color: aliceblue;
+              font-size: 14px;
+             }
+
+            .container-fluid h3{
+               font-size: 18px;
+               color: antiquewhite;
+           }
+        </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md  navbar-dark" style="background-color:#254117;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;">
+    <img src="{% static 'images/logo.png' %}" style="width:90px;height:50px;">
+    <h2 class=" ml-lg-5" style="color:white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 24px;">Keralatourism.<span style="color: yellow;">org</span><br><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 14px;">Welcome to God's Own Country</p></h2>
+
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="collapse navbar-collapse" id="collapsibleNavbar">
+       <ul class="navbar-nav ml-auto" >
+        <h4 class="mt-2 text-center" style="color: white;">{{vars.email}}</h4>
+         <li class="nav-item">
+           <a class="nav-link text-center ml-lg-5  " href="/home7/">HOME</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link text-center " href="/signup7/">SIGN UP</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link text-center  " href="/sign7/">SIGN IN</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link text-center  " href="/explore3/{{vars.id}}">EXPLORE</a>
+         </li>
+       </ul>
+     </div>
+     </nav>
+     <div class="container-fluid mt-2 bg-light">
+        <h2 style="text-align: center;font-family: 'Times New Roman', Times, serif;font-size: 26px;">KOCHI</h2>
+        <div class="row">
+            <div class="col-11 col-sm-12 col-md-6 col-lg-5">
+                <img class="img-fluid mb-4 mt-4 ml-3" style="box-shadow: 3px 2px 0 #B6B6B4;" src="{% static 'images/img39.jpg'  %}" height="350" width="580">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-7">
+                <p class="mt-4 mr-3">Kochi or Cochin is a unique placein God’s Own Country that is perfectly blended with cultural values and modern ideas! Fondly called the ‘Queen of the Arabian Sea’, this imposing port-city has always been an attraction point since the beginning of history.
+                   A melting point of numerous culture and traditions, Cochin has embraced all the modern outlook to become one of the most developed metropolis in India. Be it the essence of the Dutch establishments, British history, Chinese nets, or the traditional spice markets, Cochin will surely make you fall in love once again!
+                 </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid mt-2 bg-light">
+        <h2 style="text-align: center;font-family: 'Times New Roman', Times, serif;font-size: 26px;">FOLKLORE MUSEUM</h2>
+        <div class="row">
+            <div class="col-11 col-sm-12 col-md-12 col-lg-5">
+                <img class="img-fluid mb-4 mt-4 ml-3" style="box-shadow: 3px 2px 0 #B6B6B4;" src="{% static 'images/img40.jpg'  %}" height="350" width="560">
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+                <p class="mt-4 mr-3">The museum is dedicated to Folk art, Tribal art, Traditional art, Anthropology, Architecture, History, Culture, and Heritage of South India. The museum is promoted by Mrs. & Mr George Thaliath and aims to preserve, the culture, heritage and folk art education of Kerala.
+                It is a storehouse of lost pride of the southern part of India which consists of some rare artefacts like Sri Guruvayurappan, watercolour on paper, Lord Brahma and Goddess Saraswathi marriage, oil on canvas, Kindi, a type of a pitcher usually found in old houses and many other precious treasures.
+                 62 artists worked on wood for almost 8 years burning the midnight oil to create this temple for artisans. A must visit place for tourists, students, researchers and also for anthropological studies.
+                 <br>Location: Near 2059C No 26 Pandit Karuppan Road, Thevara Ferry Road, Junction, Kochi.</p>
+            </div>
+         </div>
+    </div>
+    <div class="container-fluid mt-2 bg-light">
+        <h2 style="text-align: center;font-family: 'Times New Roman', Times, serif;font-size: 26px;">WONDERLA AMUSEMENT PARK</h2>
+        <div class="row">
+            <div class="col-11 col-sm-12 col-md-12 col-lg-5">
+                <img class="img-fluid mb-4 mt-4 ml-3" style="box-shadow: 3px 2px 0 #B6B6B4;" src="{% static 'images/img41.webp'  %}" height="350" width="560">
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+                <p class="mt-4 mr-3">This is one of the largest amusement parks in Kochi having water rides, land rides, 3D rides and several other fun rides to keep the visitors entertained. This is one of those places to visit in Kochi if you are accompanied by a kid or an adventure seeker by nature.
+                Caterpillar village, adventures of Chikku, Dashin cars, Fire Brigade, Sky wheel, Windmill and wonder splash are a few of its major attraction. Weekends are filled with locals having a ball of a time with friends and family.   The Wonderla Pass gives access to special discount packages with added enjoyment.
+                <br> Location: Kumarapuram, Pallikkara, Kochi.</p>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+      <div  class="container-fluid mt-4 " style="background-color: #151B54;">
+        <div class="row p-4">
+          <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+            <img src="{% static 'images/logo.png' %}" class="img-fluid" width="90" height="100">
+           <h2 style="display:inline-block;color:white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 18px;">Keralatourism.<span style="color: yellow;">org</span><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 10px;">Welcome to God's Own Country</p></h2>
+           <ul>
+            <li>Department Of Tourism,</li>
+            <li>Goverenment of Kerala,Park View,</li>
+            <li>Thiruvananthapuram,Kerala,India-695 033</li>
+            <li>Phone:+91 471 2321132</li>
+            <li>Email:<a href="#">info@keralatourism.org</a></li>
+            <li class="mt-2">
+              <a href="#" class="fa fa-facebook-official"></a>
+              <a href="#" class="fa fa-twitter"></a>
+             <a href="#" class="fa fa-whatsapp"></a>
+              <a href="#" class="fa fa-pinterest"></a>
+            </li>
+          </ul>
+       </div>
+       <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+         <h3 class="mt-5 ml-5">Nature</h3>
+         <ul>
+           <li class="ml-5">Hills</li>
+           <li class="ml-5">Backwaters</li>
+           <li class="ml-5">Beaches</li>
+           <li class="ml-5">Wildlife</li>
+           <li class="ml-5">Waterfalls</li>
+         </ul>
+       </div>
+       <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <h3 class="mt-5">Places</h3>
+        <ul>
+          <li>Munnar</li>
+          <li>Wayanad</li>
+          <li>Kovalam</li>
+          <li>Periyar</li>
+          <li>Varkala</li>
+        </ul>
+      </div>
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <h3 class="mt-5 ml-5">Specialities</h3>
+        <ul>
+          <li class="ml-5">Ayurveda</li>
+          <li class="ml-5">Monsoon</li>
+          <li class="ml-5">Houseboat</li>
+          <li class="ml-5">Kerala Food</li>
+          <li class="ml-5">Festivals</li>
+        </ul>
+      </div>
+        </div>
+        </div>
+        <div class="container-fluid text-white pt-2 " style="background-color: #123456;">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-8 ml-3">
+              <p class="copyright-text" style="font-size: 16px;">All rights reserved &copy; Kerala Tourism 2021.Copyright</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

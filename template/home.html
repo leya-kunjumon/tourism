@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/a/a5/Kerala_God%27s_Own_Country_Logo.svg/300px-Kerala_God%27s_Own_Country_Logo.svg.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdeliver.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav-link:hover{
+            border: 1px solid white;
+            animation: move 0.6s 2;
+
+        }
+        @keyframes move{
+          0%{
+            transform: translateY(0%);
+          }
+          50%{
+            transform: translateY(-30%);
+          }
+          100%{
+            transform: translateY(0%);
+          }
+        }
+
+        .carousel-inner img {
+              width: 100%;
+              height: 100%;
+            }
+          
+            .img-fluid:hover{
+              animation:side 0.5s 1 ;
+            }
+            @keyframes side{
+              0%{
+                transform: translateY(0%);
+              }
+              50%{
+                transform: translateY(-10%) scale(1.1,1.1);
+                
+              }
+              100%{
+                transform: translateY(0%);
+              }
+            }
+            .fa{
+              color: white;
+              font-size: 20px;
+              margin-right: 5px;
+              margin-bottom: 20px;
+
+             }
+            .container-fluid ul li{
+              list-style: none;
+              color: aliceblue;
+              font-size: 14px;
+             }
+
+            .container-fluid h3{
+               font-size: 18px;
+               color: antiquewhite;
+           }
+           .centered{
+                position: absolute;
+                top: 79%;
+                left: 200px;
+                color: white;
+                font-size: 25px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .bckgrnd{
+            background-image: url("{% static 'images/img23.webp'  %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .bckgrnd img{
+            width:425px;
+            height: 300px;
+            border-radius: 13px;
+        }
+        .carousel-item img{
+            position: relative;
+            }
+        .carousel-item h5{
+          position: absolute;
+          top:50%;
+          left: 45%;
+          color: wheat;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md  navbar-dark" style="background-color:black;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;">
+ <img src="{% static 'images/logo.png' %}" style="width:90px;height:50px;">
+ <h2 class=" ml-lg-5" style="color:white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 24px;">Keralatourism.<span style="color: yellow;">org</span><br><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 14px;">Welcome to God's Own Country</p></h2>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse"  id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item">
+        <form action="/homee/" method="post">
+          {% csrf_token %}
+        <a class="nav-link text-center ml-lg-5 " href="/homee/" >HOME</a>
+        </form>
+      </li>
+      <li class="nav-item">
+        <form action="/signup/" method="post">
+          {% csrf_token %}
+        <a class="nav-link text-center" href="/signup/">SIGN UP</a>
+        </form>
+      </li>
+      <li class="nav-item">
+        <form action="/sign/" method="post">
+          {% csrf_token %}
+      <a class="nav-link text-center" href="/sign/">SIGN IN</a>
+        </form>
+      </li>
+</ul>
+ </div>
+</nav>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/kerala1.jpg'  %}" alt="Los Angeles">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/kerala2.jpg'  %}" alt="Chicago">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/kerala3.jpg'    %}" alt="New York">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+  <div class="bckgrnd">
+    <div class="container-fluid mt-5">
+        <h2 class="text-center text-white">THINGS TO DO IN KERALA</h2>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <img class="img-fluid mb-1" src="{% static 'images/img17.jpg'   %}">
+               <div class="centered">Houseboat Cruise</div>
+             </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+             <img class="img-fluid mb-1" src="{% static 'images/img18.jpg'   %}">
+             <div class="centered">Malabar Cuisine</div>
+         </div>
+         <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+             <img class="img-fluid mb-1" src="{% static 'images/img19.jpg'   %}">
+             <div class="centered">Adventure Activities</div>
+         </div>
+         <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+             <img class="img-fluid mb-1" src="{% static 'images/img20.jpg'   %}">
+             <div class="centered">Festivals</div>
+         </div>
+         <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+             <img class="img-fluid mb-1" src="{% static 'images/img22.jpg'   %}">
+             <div class="centered">Konni</div>
+         </div>
+         <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+             <img class="img-fluid mb-1" src="{% static 'images/img21.jpg'   %}">
+             <div class="centered">Yoga</div>
+         </div>
+        </div>
+    </div>
+    </div>
+  <footer>
+  <div  class="container-fluid mt-4 " style="background-color: #151B54;">
+    <div class="row p-4">
+      <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <img src="{% static 'images/logo.png' %}" class="img-fluid" width="90" height="100">
+       <h2 style="display:inline-block;color:white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 18px;">Keralatourism.<span style="color: yellow;">org</span><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 10px;">Welcome to God's Own Country</p></h2>
+       <ul>
+        <li>Department Of Tourism,</li>
+        <li>Goverenment of Kerala,Park View,</li>
+        <li>Thiruvananthapuram,Kerala,India-695 033</li>
+        <li>Phone:+91 471 2321132</li>
+        <li>Email:<a href="#">info@keralatourism.org</a></li>
+        <li class="mt-2">
+          <a href="#" class="fa fa-facebook-official"></a>
+          <a href="#" class="fa fa-twitter"></a>
+         <a href="#" class="fa fa-whatsapp"></a>
+          <a href="#" class="fa fa-pinterest"></a>
+        </li>
+      </ul>
+   </div>
+   <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+     <h3 class="mt-5 ml-5">Nature</h3>
+     <ul>
+       <li class="ml-5">Hills</li>
+       <li class="ml-5">Backwaters</li>
+       <li class="ml-5">Beaches</li>
+       <li class="ml-5">Wildlife</li>
+       <li class="ml-5">Waterfalls</li>
+     </ul>
+   </div>
+   <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+    <h3 class="mt-5">Places</h3>
+    <ul>
+      <li>Munnar</li>
+      <li>Wayanad</li>
+      <li>Kovalam</li>
+      <li>Periyar</li>
+      <li>Varkala</li>
+    </ul>
+  </div>
+  <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+    <h3 class="mt-5 ml-5">Specialities</h3>
+    <ul>
+      <li class="ml-5">Ayurveda</li>
+      <li class="ml-5">Monsoon</li>
+      <li class="ml-5">Houseboat</li>
+      <li class="ml-5">Kerala Food</li>
+      <li class="ml-5">Festivals</li>
+    </ul>
+  </div>
+    </div>
+    </div>
+    <div class="container-fluid text-white pt-2 " style="background-color: #123456;">
+      <div class="row text-center">
+        <div class="col">
+          <p class="copyright-text">All rights reserved &copy; Kerala Tourism 2021.Copyright</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

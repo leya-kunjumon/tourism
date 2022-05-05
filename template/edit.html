@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static     %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md  navbar-dark" style="background-color:black;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;">
+        <img src="{% static 'images/logo.png' %}" style="width:90px;height:50px;">
+        <h2 class=" ml-lg-5" style="color:white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 24px;">Keralatourism.<span style="color: yellow;">org</span><br><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 14px;">Welcome to God's Own Country</p></h2>
+       
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+       
+         <div class="collapse navbar-collapse"  id="collapsibleNavbar">
+           <ul class="navbar-nav ml-auto" >
+             <li class="nav-item">
+               <a class="nav-link text-center ml-lg-5 " href="/orgin1/" >HOME</a>
+               </li>
+            </ul>
+         </div>
+    </nav>
+    <div class="container mt-5  " style="width:390px;height:360px;background-color: blueviolet;">
+        <h3 class="text-center text-light">UPDATE</h3>
+        <form action="/update/{{vars.id}}" method="post">
+            {% csrf_token  %}
+            <div class="form-group">
+                <label for="email">USERNAME:</label>
+                <input type="text" class="form-control" placeholder="Enter Username" value="{{vars.uname}}" id="email" name="name">
+              </div>
+              <div class="form-group">
+                <label for="pwd">EMAIL:</label>
+                <input type="text" class="form-control" placeholder="Enter Your email"value="{{vars.email}}"  id="mail" name="mail">
+              </div>
+              <div class="form-group">
+                <label for="pwd">PASSWORD:</label>
+                <input type="password" class="form-control" placeholder="Enter your password" value="{{vars.password}}"  id="pswd" name="pswd">
+              </div>
+            
+              <button type="submit" class="btn btn-primary" style="margin-left: 130px;">Submit</button>
+            
+            
+            
+            
+            
+        </form>
+    </div>
+    
+</body>
+</html>

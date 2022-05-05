@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .nav-link:hover{
+            border: 1px solid white;
+
+        }
+       
+
+        p{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 18px;
+            line-height: 23px;
+
+             }
+       
+        .fa{
+              color: white;
+              font-size: 20px;
+              margin-right: 5px;
+              margin-bottom: 20px;
+
+             }
+            .container-fluid ul li{
+              list-style: none;
+              color: aliceblue;
+              font-size: 14px;
+             }
+
+            .container-fluid h3{
+               font-size: 18px;
+               color: antiquewhite;
+           }
+         
+           .container-fluid a img{
+             border-radius: 18px;
+             position: relative;
+           }
+           .container-fluid a img:hover{
+             animation: bounce 1s 1;
+           }
+           @keyframes bounce{
+             0%{
+               transform: translateY(0%);
+             }
+             50%{
+               transform: translateY(-5%) scale(1.1,1.1);
+               
+             }
+             100%{
+               transform: translateY(0%);
+             }
+           }
+           .container-fluid h5{
+             position: absolute;
+             bottom: 10%;
+             left: 30%;
+             
+           }
+        </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md  navbar-dark" style="background-color:#254117;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;">
+    <img src="{% static 'images/logo.png' %}" style="width:90px;height:50px;">
+    <h2 class=" ml-lg-5" style="color:white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 24px;">Keralatourism.<span style="color: yellow;">org</span><br><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 14px;">Welcome to God's Own Country</p></h2>
+
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+      
+     <div class="collapse navbar-collapse" id="collapsibleNavbar">
+       <ul class="navbar-nav ml-auto" >
+        <li class="nav-item">
+          <a class="nav-link text-center ml-lg-5  " href="/profile/{{vars.id}}">{{vars.email}}</a>
+          </li>
+        
+         <li class="nav-item">
+           <a class="nav-link text-center ml-lg-5  " href="/home4/">HOME</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link text-center " href="/signup4/">SIGN UP</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link text-center  " href="/sign4/">SIGN IN</a>
+         </li>
+         </ul>
+        
+     </div>
+     
+     </nav>
+     <div class="container-fluid mt-3 pt-3 pb-3" style="background-color:black;">
+       <h2 style="text-align: center;color:oldlace;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">KERALA:GLIMPSES OF BEAUTY</h2>
+     </div>
+   <div class="container-fluid bg-light mt-3">
+       <div class="row">
+           <div class="col-12 col-sm-12 col-md-6">
+               <img class="img-fluid" src="{% static 'images/img24.jpg'   %}" style="height:380px ;">
+               </div>
+               <div class="col-12 col-sm-12 col-md-6">
+                 <p class="ml-4 mr-5 text-justify">Kerala ‘The God’s Own country’ is an enchantingly beautiful, emerald green land, flanked by the Western Ghats on one side, the Arabian Sea on the other, and strewn with rivers, lagoons, backwaters and rich vegetation. Legends state that Kerala was created by Parshuram (a famous ancient sage). Vasco da Gama discovered the sea route to India from Europe when he landed near Calicut in 1498 AD.
+                Kerala is situated, in the South West corner of Indian peninsula. It is a tropical state with green and lush vegetation and has a 550 km coastline on the Arabian Sea. Kerala is the most densely populated state in India with 38,863 sq km area with around 33 million population. Kerala is also one of the richest states in India with forests and plantations of rubber, cashew, and coconuts everywhere. It has a particularly rich heritage of dance and drama (Kathalkali, Koothu, Mohiniattam) and people here are among the most industrious and well educated (100% literacy late) in the country. Kerala is renowned all over the world for its backwaters, natural beauty, health resorts and beaches.</p>
+               </div>
+       </div>
+   </div>
+  
+ <div class="container-fluid bg-light mt-5">
+      <h3 class="text-center mt-4" style=" color:#254117;font-size:26px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">TOP DESTINATIONS</h3>
+      <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <a href="/tvm/{{vars.id}}"><img src="{% static 'images/img25.jpg'   %}" class="img-fluid mt-4" style="height:300px;"></a>
+               <h5 class="text-center mt-2" style="   color:red; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">THIRUVANANTHAPURAM</h5>
+            </div>
+          <div class="col-12 col-sm-6 col-md-3">
+          <a href="/alpi/{{vars.id}}"><img src="{% static 'images/img26.jpg'   %}"class="img-fluid mt-4"style="height:300px;"></a>
+            <h5 class="text-center mt-2" style="color:red; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">ALAPPUZHA</h5>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <a href="/klm/{{vars.id}}"><img src="{% static 'images/img27.jpg'   %}"   class="img-fluid mt-4"style="height:300px;"></a>
+            <h5 class="text-center mt-2" style="color:red; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">KOLLAM</h5>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <a href="/erkm/{{vars.id}}"><img src="{% static 'images/img28.jpg'   %}" class="img-fluid mt-4"style="height:300px;"></a>
+            <h5 class="text-center mt-2" style="color:red; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">ERNAKULAM</h5>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+           <a href="/idki/{{vars.id}}"><img src="{% static 'images/img29.jpg'   %}" class="img-fluid mt-4"style="height:300px;"></a>
+            <h5 class="text-center mt-2" style="color:red; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">IDUKKI</h5>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <a href="/trsr/{{vars.id}}"><img src="{% static 'images/img30.jpg'   %}" class="img-fluid mt-4" style=" width: 450px;height:300px;"></a>
+            <h5 class="text-center mt-2" style="color:red; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">THRISSUR</h5>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+           <a href="/kzkod/{{vars.id}}"><img src="{% static 'images/img31.jpg'   %}" class="img-fluid mt-4"style="height:300px;"></a>
+            <h5 class="text-center mt-2" style="color:red; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">KOZHIKKOD</h5>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+           <a href="/ksrgd/{{vars.id}}"><img src="{% static 'images/img32.jpg'   %}" class="img-fluid mt-4" style="height:300px;"></a>
+            <h5 class="text-center mt-2" style="color:red; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">KASARGOD</h5>
+        </div>
+      </div>
+  </div>
+   <footer>
+    <div  class="container-fluid mt-4 " style="background-color: #151B54;">
+      <div class="row p-4">
+        <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+          <img src="{% static 'images/logo.png' %}" class="img-fluid" width="90" height="100">
+         <h2 style="display:inline-block;color:white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 18px;">Keralatourism.<span style="color: yellow;">org</span><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 10px;">Welcome to God's Own Country</p></h2>
+         <ul>
+          <li>Department Of Tourism,</li>
+          <li>Goverenment of Kerala,Park View,</li>
+          <li>Thiruvananthapuram,Kerala,India-695 033</li>
+          <li>Phone:+91 471 2321132</li>
+          <li>Email:<a href="#">info@keralatourism.org</a></li>
+          <li class="mt-2">
+            <a href="#" class="fa fa-facebook-official"></a>
+            <a href="#" class="fa fa-twitter"></a>
+           <a href="#" class="fa fa-whatsapp"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+          </li>
+        </ul>
+     </div>
+     <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+       <h3 class="mt-5 ml-5">Nature</h3>
+       <ul>
+         <li class="ml-5">Hills</li>
+         <li class="ml-5">Backwaters</li>
+         <li class="ml-5">Beaches</li>
+         <li class="ml-5">Wildlife</li>
+         <li class="ml-5">Waterfalls</li>
+       </ul>
+     </div>
+     <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+      <h3 class="mt-5">Places</h3>
+      <ul>
+        <li>Munnar</li>
+        <li>Wayanad</li>
+        <li>Kovalam</li>
+        <li>Periyar</li>
+        <li>Varkala</li>
+      </ul>
+    </div>
+    <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+      <h3 class="mt-5 ml-5">Specialities</h3>
+      <ul>
+        <li class="ml-5">Ayurveda</li>
+        <li class="ml-5">Monsoon</li>
+        <li class="ml-5">Houseboat</li>
+        <li class="ml-5">Kerala Food</li>
+        <li class="ml-5">Festivals</li>
+      </ul>
+    </div>
+      </div>
+      </div>
+      <div class="container-fluid text-white pt-2 " style="background-color: #123456;">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-8 ml-3">
+            <p class="copyright-text" style="font-size: 16px;">All rights reserved &copy; Kerala Tourism 2021.Copyright</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

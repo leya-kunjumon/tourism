@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("{% static 'images/img57.jpg'  %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .nav-link:hover{
+            border: 1px solid white;
+
+        }
+        label{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+        .card:hover {
+            animation: bounce 0.5s 1;
+            margin-left: 10px;
+        }
+        @keyframes bounce{
+          0%{
+            
+            transform: translateY(0%);
+          }
+          50%{
+            transform: translateY(-10%) 
+          }
+          75%{
+            transform: translateY(20%);
+          }
+          100%{
+            transform: translateY(0%);
+          }
+        }
+        .btn:hover{
+          background-color: red;
+          color: azure;
+          
+        }
+
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md  navbar-dark" style="background-color:#254117;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px;">
+        <img src="{% static 'images/logo.png' %}" style="width:90px;height:50px;">
+        <h2 class=" ml-lg-5" style="color:white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 24px;">Keralatourism.<span style="color: yellow;">org</span><br><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 14px;">Welcome to God's Own Country</p></h2>
+
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+           <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+               <a class="nav-link text-center ml-lg-5" href="/home3/">HOME</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link text-center" href="/signup3/">SIGN UP</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link text-center  " href="/sign3/">SIGN IN</a>
+             </li>
+
+           </ul>
+         </div>
+         </nav>
+         <div class="row">
+             <div class="col-1 col-sm-1 col-md-2 col-lg-4"></div>
+             <div class="col-11 col-sm-11 col-md-10 col-lg-8 ">
+          <div class="card mt-5 " style="width: 420px;border-radius: 10px;">
+            <div class="card-header text-white text-center" style="background-color: crimson;">
+              <h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">SIGN IN</h2>
+            </div>
+            <div class="card-body ">
+            <form action="/login/" method="post">
+              {% csrf_token  %}
+              <div class="form-group">
+                  <label for="uname" style="color: black;">USERNAME:</label>
+                <input type="email" style="width: 390px;" class="form-control" id="email" placeholder="Enter your username" name="mail">
+              </div>
+             <div class="form-group">
+                <label for="pwd" style="color: black;">PASSWORD:</label>
+                <input type="password" style="width: 390px;" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+              </div>
+            
+            
+              <p style="color:black;">not yet registered?<a href="/reg/" style="color: red;">  Register here.</a></p>
+            <button type="submit" class="btn btn-danger mb-5" style="width: 200px;margin-left: 90px;">Submit</button>
+          </form>
+            </div>
+          </div>
+             </div>
+         </div>
+</body>
+</html>
